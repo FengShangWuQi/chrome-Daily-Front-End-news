@@ -1,3 +1,12 @@
+/* 处理 new */
+import API from './API.js';
+
+const GITHUB = new API(
+  'https://api.github.com',
+  'fengshangwuqi',
+  'Front-End-News'
+);
+
 class News {
   constructor(repository, url) {
     this.repository = repository;
@@ -18,6 +27,33 @@ class News {
 
   static savePaths(paths) {
     localStorage.setItem('FEDN-path', JSON.stringify(paths));
+  }
+
+  static async initPopup(currDate) {
+    const years = await GITHUB.getContent('history');
+    const lastYear = years.pop();
+    const months = await GITHUB.getContent(`history/${lastYear}`);
+    const lastMonth = months.pop();
+    const days = await GITHUB.getContent(`history/${lastYear}/${lastMonth}`);
+    const lastDay = days[days.length - 1];
+    let firstThreePaths = [];
+
+    if (new Date(lastDay).getTime() > new Date(currDate).getTime()) {
+      firstThreePaths = days.length > 3 ? days.slice(-3) : days;
+    } else {
+      const currIndex = days.indexOf(currDate.slice(-2));
+      firstThreePaths =
+        currIndex + 1 > 3
+          ? days.slice(currIndex - 2, currIndex + 1)
+          : days.slice(0, currIndex + 1);
+    }
+
+    const newPaths = firstThreePaths.map(
+      day => `${lastYear}/${lastMonth}/${day}`
+    );
+    News.savePaths(newPaths);
+
+    return newPaths;
   }
 
   async getCurrNew(path) {
@@ -42,3 +78,5 @@ class News {
     return { repository: this.repository, path, text: curr };
   }
 }
+
+export default News;

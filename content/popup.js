@@ -1,3 +1,5 @@
+import NewsCard from './newsCard.js';
+
 chrome.runtime.sendMessage(
   {
     action: 'initPopup',

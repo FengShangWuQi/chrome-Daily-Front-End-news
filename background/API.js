@@ -1,3 +1,5 @@
+/* github rest api */
+
 class API {
   constructor(url, owner, repo) {
     this.url = url;
@@ -5,9 +7,7 @@ class API {
     this.repo = repo;
   }
 
-  /* github
-	 * Render an arbitrary Markdown document
-	 * */
+  /* Render an arbitrary Markdown document */
   async getMarkdown(text) {
     const res = await fetch(`${this.url}/markdown`, {
       method: 'POST',
@@ -19,9 +19,7 @@ class API {
     return res;
   }
 
-  /* github
-	 * Get contents
-	 * */
+  /* Get contents */
   async getContent(path) {
     const res = await fetch(
       `${this.url}/repos/${this.owner}/${this.repo}/contents/${path}`,
@@ -35,3 +33,5 @@ class API {
     return res;
   }
 }
+
+export default API;

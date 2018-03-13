@@ -1,3 +1,5 @@
+import { formatDate } from '../utils/date.js';
+
 const NewsCard = {};
 
 NewsCard.init = function(paths) {
@@ -74,3 +76,5 @@ ${res.text}
     }
   );
 };
+
+export default NewsCard;
