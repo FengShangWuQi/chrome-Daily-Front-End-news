@@ -1,0 +1,39 @@
+h2 {
+  margin: 15px 0 3px;
+  padding-left: 15px;
+}
+
+ul {
+  margin: 0;
+  padding: 0 15px;
+  list-style: none;
+}
+
+li {
+  color: #999;
+  text-align: justify;
+}
+
+li a:first-child {
+  font-size: 13px;
+  color: #3d46bd;
+}
+
+.news-pagination {
+  position: relative;
+  top: 12px;
+  text-align: center;
+  color: #999;
+}
+
+.news-publish-date {
+  position: absolute;
+  left: 14px;
+  bottom: -29px;
+  text-align: center;
+  color: #999;
+}
+
+#news-title {
+  display: inline-block;
+}

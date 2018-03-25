@@ -1,28 +1,10 @@
-import News from './News.js';
-import { formatDate } from '../utils/date.js';
+import * as news from './News/index.js';
 
-async function handleMessage(message, sender, sendResponse) {
-  const paths = News.getPaths() || [];
-  const currDate = formatDate(new Date());
-
+const handleMessage = async (message, sender, sendResponse) => {
   try {
-    switch (message.action) {
-      case 'initPopup':
-        if (paths.includes(currDate)) {
-          sendResponse(paths);
-        } else {
-          const newPaths = await News.initPopup(currDate);
-          sendResponse(newPaths);
-        }
-        break;
-      case 'getCurrNew':
-        const currPath = message.path;
-        const NEWS = new News(
-          'https://github.com/FengShangWuQi/Daily-Front-End-News',
-          `https://raw.githubusercontent.com/FengShangWuQi/Front-End-News/master/history/${currPath}/README.md`
-        );
-
-        sendResponse(await NEWS.getCurrNew(currPath));
+    switch (message.type) {
+      case 'news':
+        await news.handleMessage(message, sender, sendResponse);
         break;
       default:
         sendResponse(false);
@@ -30,7 +12,7 @@ async function handleMessage(message, sender, sendResponse) {
   } catch (err) {
     console.error(err);
   }
-}
+};
 
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
   handleMessage(message, sender, sendResponse);
