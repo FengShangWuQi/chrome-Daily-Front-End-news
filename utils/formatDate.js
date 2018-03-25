@@ -1,4 +1,4 @@
-export const formatDate = date => {
+export default date => {
   const year = date.getFullYear();
   const m = date.getMonth() + 1;
   const month = m < 10 ? `0${m}` : m;

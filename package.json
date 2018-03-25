@@ -1,0 +1,58 @@
+{
+  "name": "Daily-Front-End-news",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:FengShangWuQi/chrome-Daily-Front-End-news.git"
+  },
+  "lint-staged": {
+    "*.{js,css}": [
+      "prettier --single-quote --trailing-comma es5 --write",
+      "git add"
+    ]
+  },
+  "scripts": {
+    "lint": "eslint ./",
+    "prettier":
+      "prettier --single-quote --trailing-comma es5 --write './**/*.+(js|css)'",
+    "precommit": "lint-staged",
+    "commitmsg": "validate-commit-msg"
+  },
+  "eslintConfig": {
+    "extends": ["airbnb-base", "prettier"],
+    "globals": {
+      "chrome": false
+    },
+    "env": {
+      "browser": true
+    },
+    "rules": {
+      "import/extensions": [
+        {
+          "js": 2
+        }
+      ],
+      "no-shadow": 1,
+      "import/prefer-default-export": 0,
+      "require-jsdoc": [
+        2,
+        {
+          "require": {
+            "ClassDeclaration": false
+          }
+        }
+      ],
+      "no-param-reassign": 1
+    }
+  },
+  "devDependencies": {
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-import": "^2.9.0",
+    "husky": "^0.14.3",
+    "lint-staged": "^7.0.0",
+    "prettier": "^1.11.1",
+    "validate-commit": "^3.4.0"
+  }
+}
