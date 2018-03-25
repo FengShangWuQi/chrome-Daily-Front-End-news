@@ -1,6 +1,7 @@
 /* handle news */
 import GitHubAPI from '../API/github.js';
 import config from '../config/index.js';
+import formatDate from '../../utils/formatDate.js';
 
 class News {
   constructor(title) {

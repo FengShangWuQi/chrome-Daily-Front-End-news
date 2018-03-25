@@ -1,7 +1,7 @@
 import Header from './components/Header/index.js';
 import Item from './components/Item/index.js';
 
-export const init = titles => {
+export const init = () => {
   const div = document.createElement('div');
   div.id = 'news-card';
 

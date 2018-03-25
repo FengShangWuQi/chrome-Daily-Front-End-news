@@ -1,10 +1,10 @@
 {
   "manifest_version": 2,
 
-  "name": "Front End News",
+  "name": "Daily-Front-End-news",
   "description": "Front End News every day",
   "author": "fengshangwuqi, fengshangwuqi@gmail.com",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "icons": {
     "128": "images/icon.png"
   },

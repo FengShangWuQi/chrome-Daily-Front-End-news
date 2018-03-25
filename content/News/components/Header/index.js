@@ -10,7 +10,7 @@ class Header {
   addListener() {
     const { title, titles } = this;
     const currIndex = titles.indexOf(title);
-    const length = titles.length;
+    const { length } = titles;
 
     const readMore = document.getElementById('news-read-more');
 

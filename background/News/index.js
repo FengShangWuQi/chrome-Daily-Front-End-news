@@ -1,11 +1,10 @@
 import News from './News.js';
 import formatDate from '../../utils/formatDate.js';
-import config from '../config/index.js';
 
 export const handleMessage = async (message, sender, sendResponse) => {
   try {
     switch (message.action) {
-      case 'getTitles':
+      case 'getTitles': {
         const titles = News.getTitles();
         const title = formatDate(new Date());
 
@@ -17,13 +16,13 @@ export const handleMessage = async (message, sender, sendResponse) => {
           sendResponse(newTitles);
         }
         break;
-      case 'getCurrContent':
-        const { githubAPIPrefix, owner, repo } = config.url;
-
+      }
+      case 'getCurrContent': {
         const newsOne = new News(message.payload.title);
 
         sendResponse(await newsOne.getCurrContent());
         break;
+      }
       default:
         sendResponse(false);
     }
