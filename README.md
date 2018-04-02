@@ -1,6 +1,8 @@
 
 > # chrome-Daily-Front-End-news
 
+数据来源：[Daily-Front-End-News](https://github.com/FengShangWuQi/Daily-Front-End-News)
+
 ![screenshot](./images/screenshot.png)
 
 ## 使用
