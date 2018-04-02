@@ -1,4 +1,5 @@
 import { getCurrContent } from '../../index.js';
+import { COLORS } from '../../../../constant.js';
 
 class Header {
   constructor(url, title, titles) {
@@ -40,12 +41,14 @@ class Header {
 
   render() {
     const header = document.getElementById('news-header');
+    const index = new Date().getDate() - 1;
+    const color = COLORS[index];
 
     header.innerHTML = `<div id="news-left-arrow" class="news-header-arrow"><<<</div>
 <div id="news-right-arrow" class="news-header-arrow">>>></div>
 <a href="${
       this.url
-    }" rel="noopener noreferrer" id="news-read-more" style="color: #00bcd4">查看更多</a>`;
+    }" rel="noopener noreferrer" id="news-read-more" style="color: ${color}">查看更多</a>`;
   }
 }
 
