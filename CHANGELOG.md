@@ -15,3 +15,4 @@
 * 添加 packge.json :panda_face: ([838575a](https://github.com/FengShangWuQi/chrome-Daily-Front-End-news/commit/838575a))
 * 每日展示不同的主题颜色 :rose: ([9cd4eaf](https://github.com/FengShangWuQi/chrome-Daily-Front-End-news/commit/9cd4eaf))
 * 添加扩展压缩自动化脚本 :bear: ([8205103](https://github.com/FengShangWuQi/chrome-Daily-Front-End-news/commit/8205103))
+* 支持添加代码块 :heart: ([74e1483](https://github.com/FengShangWuQi/chrome-Daily-Front-End-news/commit/74e1483))
