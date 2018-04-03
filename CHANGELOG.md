@@ -5,6 +5,7 @@
 ### Bug Fixes
 
 * 更新图标大小 :bug: ([68146ea](https://github.com/FengShangWuQi/chrome-Daily-Front-End-news/commit/68146ea))
+* 修复资讯截取异常 :jack_o_lantern: ([50297cc](https://github.com/FengShangWuQi/chrome-Daily-Front-End-news/commit/50297cc))
 
 
 ### Features

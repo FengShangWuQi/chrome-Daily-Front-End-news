@@ -55,7 +55,7 @@ class News {
 
       topNumTitles =
         currIndex + 1 >= MAX
-          ? days.slice(currIndex - MAX + 1, currIndex)
+          ? days.slice(currIndex - MAX + 1, currIndex + 1)
           : days.slice(0, currIndex);
     }
 
