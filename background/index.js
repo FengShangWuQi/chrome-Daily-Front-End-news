@@ -7,7 +7,7 @@ const handleMessage = async (message, sender, sendResponse) => {
         await news.handleMessage(message, sender, sendResponse);
         break;
       default:
-        sendResponse(false);
+        console.error('未找到匹配 type');
     }
   } catch (err) {
     console.error(err);

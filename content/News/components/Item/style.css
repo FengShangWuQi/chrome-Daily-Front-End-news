@@ -19,18 +19,22 @@ li a:first-child {
   color: #3d46bd;
 }
 
-.news-pagination {
+.news-footer {
   position: relative;
-  top: 12px;
+  height: 48px;
+  line-height: 48px;
   text-align: center;
+}
+
+.news-pagination {
   color: #999;
 }
 
 .news-publish-date {
   position: absolute;
+  line-height: 30px;
   left: 14px;
-  bottom: -29px;
-  text-align: center;
+  bottom: 1px;
   color: #999;
 }
 

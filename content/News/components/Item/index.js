@@ -13,11 +13,13 @@ class Item {
     const index = new Date().getDate() - 1;
     const color = COLORS[index];
 
-    item.innerHTML = `<div class="news-item">${this.text}</div>
-<div class="news-pagination">${current} / ${total}</div>
-<div class="news-publish-date">发布：<div id="news-title">${
-      this.title
-    }</div></div>`;
+    item.innerHTML = `
+<div class="news-item">${this.text}</div>
+	<footer class="news-footer">
+		<div class="news-pagination">${current} / ${total}</div>
+		<div class="news-publish-date">发布：<div id="news-title">${this.title}</div>
+	</footer>
+</div>`;
 
     document.querySelector('blockquote').style.background = color;
   }

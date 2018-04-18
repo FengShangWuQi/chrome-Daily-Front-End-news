@@ -4,7 +4,7 @@ export default {
     githubAPIPrefix: 'https://api.github.com',
     githubRawPrefix: 'https://raw.githubusercontent.com',
     owner: 'fengshangwuqi',
-    repo: 'Front-End-News',
+    repo: 'Daily-Front-End-News',
   },
   params: {
     MAX: 3,
