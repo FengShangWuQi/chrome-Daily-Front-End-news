@@ -1,3 +1,4 @@
+import Loading from '../Loading/index.js';
 import { getCurrContent } from '../../index.js';
 import { COLORS } from '../../../../constant.js';
 
@@ -32,7 +33,9 @@ class Header {
   static handleArrow(dom, title, titles) {
     if (title) {
       dom.addEventListener('click', () => {
-        getCurrContent(titles, title);
+        Loading.renderHeader();
+        Loading.renderItem();
+        setTimeout(() => getCurrContent(titles, title), 750);
       });
     } else {
       dom.style.display = 'none';

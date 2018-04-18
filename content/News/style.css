@@ -1,4 +1,12 @@
 #news-card {
-  margin: 0 0 40px;
+  margin: 0;
   position: relative;
+}
+
+.container {
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }

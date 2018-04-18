@@ -8,25 +8,31 @@ export const handleMessage = async (message, sender, sendResponse) => {
         const titles = News.getTitles();
         const title = formatDate(new Date());
 
-        if (titles.includes(title)) {
-          sendResponse(titles);
-        } else {
-          const newTitles = await News.getNewTitles();
-
-          sendResponse(newTitles);
-        }
+        const res = {
+          code: 0,
+          titles: titles.includes(title) ? titles : await News.getNewTitles(),
+        };
+        sendResponse(res);
         break;
       }
       case 'getCurrContent': {
-        const newsOne = new News(message.payload.title);
+        const item = new News(message.payload.title);
 
-        sendResponse(await newsOne.getCurrContent());
+        sendResponse({
+          code: 0,
+          content: await item.getCurrContent(),
+        });
         break;
       }
       default:
-        sendResponse(false);
+        console.error('未找到匹配 action');
     }
   } catch (err) {
-    console.error(err);
+    console.error(err.message);
+
+    sendResponse({
+      code: 1,
+      err,
+    });
   }
 };
