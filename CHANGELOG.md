@@ -1,11 +1,11 @@
-<a name="1.0.8"></a>
-## 1.0.8 (2018-04-02)
-
+<a name="1.0.11"></a>
+## 1.0.11 (2018-04-19)
 
 ### Bug Fixes
 
 * 更新图标大小 :bug: ([68146ea](https://github.com/FengShangWuQi/chrome-Daily-Front-End-news/commit/68146ea))
 * 修复资讯截取异常 :jack_o_lantern: ([50297cc](https://github.com/FengShangWuQi/chrome-Daily-Front-End-news/commit/50297cc))
+* 添加 loading，认证和错误提示，fix [#8](https://github.com/FengShangWuQi/chrome-Daily-Front-End-news/issues/8), [#9](https://github.com/FengShangWuQi/chrome-Daily-Front-End-news/issues/9), [#10](https://github.com/FengShangWuQi/chrome-Daily-Front-End-news/issues/10) ([0faf896](https://github.com/FengShangWuQi/chrome-Daily-Front-End-news/commit/0faf896))
 
 
 ### Features
