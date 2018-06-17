@@ -19,6 +19,13 @@ li a:first-child {
   color: #3d46bd;
 }
 
+img {
+  display: block;
+  margin: 0 auto;
+  width: 600px;
+  border-radius: 5px;
+}
+
 .news-footer {
   position: relative;
   height: 48px;

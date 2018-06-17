@@ -1,5 +1,6 @@
-<a name="1.0.11"></a>
-## 1.0.11 (2018-04-19)
+<a name="1.0.12"></a>
+## 1.0.12 (2018-06-17)
+
 
 ### Bug Fixes
 
@@ -17,3 +18,4 @@
 * 每日展示不同的主题颜色 :rose: ([9cd4eaf](https://github.com/FengShangWuQi/chrome-Daily-Front-End-news/commit/9cd4eaf))
 * 添加扩展压缩自动化脚本 :bear: ([8205103](https://github.com/FengShangWuQi/chrome-Daily-Front-End-news/commit/8205103))
 * 支持添加代码块 :heart: ([74e1483](https://github.com/FengShangWuQi/chrome-Daily-Front-End-news/commit/74e1483))
+* support img（used for festival） :japanese_ogre: ([2948159](https://github.com/FengShangWuQi/chrome-Daily-Front-End-news/commit/2948159))
