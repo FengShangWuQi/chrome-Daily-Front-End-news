@@ -1,9 +1,10 @@
-<a name="1.0.12"></a>
-## 1.0.12 (2018-06-17)
+<a name="1.0.13"></a>
+## 1.0.13 (2018-06-22)
 
 
 ### Bug Fixes
 
+* hide scrollbar after adding picture :collision: ([8693dc6](https://github.com/FengShangWuQi/chrome-Daily-Front-End-news/commit/8693dc6))
 * 更新图标大小 :bug: ([68146ea](https://github.com/FengShangWuQi/chrome-Daily-Front-End-news/commit/68146ea))
 * 修复资讯截取异常 :jack_o_lantern: ([50297cc](https://github.com/FengShangWuQi/chrome-Daily-Front-End-news/commit/50297cc))
 * 添加 loading，认证和错误提示，fix [#8](https://github.com/FengShangWuQi/chrome-Daily-Front-End-news/issues/8), [#9](https://github.com/FengShangWuQi/chrome-Daily-Front-End-news/issues/9), [#10](https://github.com/FengShangWuQi/chrome-Daily-Front-End-news/issues/10) ([0faf896](https://github.com/FengShangWuQi/chrome-Daily-Front-End-news/commit/0faf896))
