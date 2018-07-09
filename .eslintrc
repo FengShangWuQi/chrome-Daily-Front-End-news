@@ -1,0 +1,28 @@
+{
+  "extends": ["airbnb-base", "prettier"],
+  "globals": {
+    "chrome": false
+  },
+  "env": {
+    "browser": true
+  },
+  "rules": {
+    "import/extensions": [
+      {
+        "js": 2
+      }
+    ],
+    "no-shadow": 1,
+    "import/prefer-default-export": 0,
+    "require-jsdoc": [
+      2,
+      {
+        "require": {
+          "ClassDeclaration": false,
+          "FunctionDeclaration": false
+        }
+      }
+    ],
+    "no-param-reassign": 1
+  }
+}

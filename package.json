@@ -1,55 +1,20 @@
 {
-  "name": "Daily-Front-End-news",
-  "version": "1.0.13",
   "private": true,
-  "repository": {
-    "type": "git",
-    "url": "git@github.com:FengShangWuQi/chrome-Daily-Front-End-news.git"
-  },
+  "name": "Daily-Front-End-news",
+  "version": "1.0.14",
+  "author": "枫上雾棋 <fengshangwuqi@gmail.com>",
+  "repository": "github:FengShangWuQi/chrome-Daily-Front-End-news",
   "lint-staged": {
     "*.{js,json,css}": [
-      "prettier --single-quote --trailing-comma es5 --write",
+      "prettier-eslint --write",
       "git add"
     ]
   },
   "scripts": {
-    "zip":
-      "rimraf chrome-Daily-Front-End-news.zip && git archive -o chrome-Daily-Front-End-news.zip -9 HEAD",
-    "lint": "eslint ./",
-    "prettier":
-      "prettier --single-quote --trailing-comma es5 --write './**/*.+(js|json|css)'",
+    "zip": "rimraf chrome-Daily-Front-End-news.zip && git archive -o chrome-Daily-Front-End-news.zip -9 HEAD",
     "precommit": "lint-staged",
     "commitmsg": "commitlint -x @commitlint/config-conventional -e $GIT_PARAMS",
-    "changelog":
-      "conventional-changelog -p angular -i CHANGELOG.md -s && git add CHANGELOG.md"
-  },
-  "eslintConfig": {
-    "extends": ["airbnb-base", "prettier"],
-    "globals": {
-      "chrome": false
-    },
-    "env": {
-      "browser": true
-    },
-    "rules": {
-      "import/extensions": [
-        {
-          "js": 2
-        }
-      ],
-      "no-shadow": 1,
-      "import/prefer-default-export": 0,
-      "require-jsdoc": [
-        2,
-        {
-          "require": {
-            "ClassDeclaration": false,
-            "FunctionDeclaration": false
-          }
-        }
-      ],
-      "no-param-reassign": 1
-    }
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s && git add CHANGELOG.md"
   },
   "devDependencies": {
     "@commitlint/cli": "^7.0.0",
@@ -61,7 +26,7 @@
     "eslint-plugin-import": "^2.9.0",
     "husky": "^0.14.3",
     "lint-staged": "^7.0.0",
-    "prettier": "^1.11.1",
+    "prettier-eslint-cli": "^4.7.1",
     "rimraf": "^2.6.2"
   }
 }
